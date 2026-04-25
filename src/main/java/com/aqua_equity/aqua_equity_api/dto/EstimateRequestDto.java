@@ -18,6 +18,7 @@ public class EstimateRequestDto {
 	Float moistureMeanMm;
 	Boolean Updated;
 	Float stressLevel;
+	Boolean measurementAvailable;
 	
 	
 	public Long getId() {
@@ -103,6 +104,12 @@ public class EstimateRequestDto {
 	}
 	public void setStressLevel(Float stressLevel) {
 		this.stressLevel = stressLevel;
+	}
+	public Boolean getMeasurementAvailable() {
+		return measurementAvailable;
+	}
+	public void setMeasurementAvailable(Boolean measurementAvailable) {
+		this.measurementAvailable = measurementAvailable;
 	}
 	
 	

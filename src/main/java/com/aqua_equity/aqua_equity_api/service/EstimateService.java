@@ -39,6 +39,7 @@ public class EstimateService {
 		newEstimate.setMoistureMeanMm(request.getMoistureMeanMm());
 		newEstimate.setUpdated(request.getUpdated());
 		newEstimate.setStressLevel(request.getStressLevel());
+		newEstimate.setMeasurementAvailable(request.getMeasurementAvailable());
 		
 		
 		
@@ -64,6 +65,7 @@ public class EstimateService {
 		if(request.getMoistureMeanMm() != null) newEstimate.setMoistureMeanMm(request.getMoistureMeanMm());
 		if(request.getUpdated() != null) newEstimate.setUpdated(request.getUpdated());
 		if(request.getStressLevel() != null) newEstimate.setStressLevel(request.getStressLevel());
+		if(request.getMeasurementAvailable() != null) newEstimate.setMeasurementAvailable(request.getMeasurementAvailable());
 		
 		return estimateRepo.save(newEstimate);
 	}

@@ -16,20 +16,21 @@ import jakarta.persistence.Table;
 @Table(name = "estimates")
 public class Estimate {
 
-	Long id;
-	Farm farm;
-	LocalDateTime estimateDate;
-	Float xPred;
-	Float pPred;
-	Float xUpd;
-	Float pUpd;
-	Float rainMm;
-	Float et0Mm;
-	Float irrigationMm;
-	Float ndviMean;
-	Float moistureMeanMm;
-	Boolean Updated;
-	Float stressLevel;
+	private Long id;
+	private Farm farm;
+	private LocalDateTime estimateDate;
+	private Float xPred;
+	private Float pPred;
+	private Float xUpd;
+	private Float pUpd;
+	private Float rainMm;
+	private Float et0Mm;
+	private Float irrigationMm;
+	private Float ndviMean;
+	private Float moistureMeanMm;
+	private Boolean Updated;
+	private Float stressLevel;
+	private Boolean measurementAvailable;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -144,6 +145,14 @@ public class Estimate {
 	}
 	public void setStressLevel(Float stressLevel) {
 		this.stressLevel = stressLevel;
+	}
+	
+	@Column(name = "measurement_available")
+	public Boolean getMeasurementAvailable() {
+		return measurementAvailable;
+	}
+	public void setMeasurementAvailable(Boolean measurementAvailable) {
+		this.measurementAvailable = measurementAvailable;
 	}
 	
 	
