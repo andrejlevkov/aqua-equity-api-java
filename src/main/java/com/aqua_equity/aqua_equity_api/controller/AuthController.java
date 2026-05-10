@@ -11,7 +11,7 @@ import com.aqua_equity.aqua_equity_api.dto.LoginResponseDto;
 import com.aqua_equity.aqua_equity_api.service.AuthService;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 public class AuthController {
 
     private final AuthService authService;
